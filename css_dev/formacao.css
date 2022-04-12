@@ -1,0 +1,172 @@
+#formacao{
+    background-color: #E6E6E6;
+    padding: 40px 24px;
+}
+#formacao-container{
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(314px, 1fr));
+    gap: 40px 24px;
+}
+#formacao-title{
+    color: #959FAB;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    font-size: 48px;
+    line-height: 54px;
+    margin-bottom: 10px;
+}
+#formacao-description>p{
+    color: #4A4A4A;
+    font-family: 'Lato', sans-serif;
+    font-size: 20px;
+    line-height: 30px;
+    max-width: 34ch;
+}
+#formacao-description>p>strong{
+    color: #003066;
+}
+.university{
+    background-color: #000C24;
+    height: 238px;
+    padding: 20px;
+    border-radius: 20px;
+    position: relative;
+    min-width: 314px;
+}
+.university-type{
+    color: #9C9DA1;
+    font-family: 'Poppins', sans-serif;
+    font-size: 10px;
+    line-height: 12px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    margin-bottom: 2px;
+}
+.university>h3{
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 22px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+.university>ul{
+    list-style: none;
+}
+.university>ul>li{
+    color: #A6A6A6;
+    font-family: 'Lato', sans-serif;
+    font-size: 14px;
+    line-height: 16px;
+    margin-bottom: 10px;
+}
+.university>ul>li:last-child{
+    margin-bottom: 0;
+}
+.university>address{
+    position: absolute;
+    bottom: 20px;
+    display: flex;
+    width: calc(100% - 40px);
+    justify-content: space-between;
+}
+.university-name{
+    font-family: 'Poppins', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 18px;
+    color: #00FF80;
+}
+.university-city{
+    color: #A6A6A6;
+    font-family: 'Poppins', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 18px;
+}
+.inactive{
+    background-color: #003066;
+}
+.inactive>.university-type{
+    color: #BEC0C4;
+}
+.inactive>h3{
+    color: #E6E6E6;
+}
+.inactive>ul>li{
+    color: #CCCCCC;
+}
+.inactive>address>.university-city{
+    color: #CCCCCC;
+}
+.courses{
+    grid-column: 2 / -1;
+}
+.courses>h3{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 22px;
+    margin-bottom: 20px;
+}
+.courses>ul{
+    list-style: none;
+}
+.courses>ul>li{
+    color: #3D3D3D;
+    font-family: 'Lato', sans-serif;
+    font-size: 16px;
+    line-height: 18px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+.courses>ul>li:last-child{
+    margin-bottom: 0px;
+}
+.local{
+    text-decoration: none;
+    font-weight: 700;
+}
+.origamid{
+    color: #5332A6;
+}
+.evg{
+    color: #095711;
+}
+.bradesco{
+    color: #99022D;
+}
+@media (max-width: 1037px) {
+    #formacao-container{
+        max-width: 800px;
+    }
+    #formacao-description{
+        grid-column: 1 / -1;
+        text-align: center;
+        margin: 0 auto;
+    }
+    .courses{
+        grid-column: 1/-1;
+    }
+}
+@media (max-width: 699px) {
+    #formacao-container{
+        max-width: 400px;
+        justify-content: center;
+    }
+    .courses li{
+        flex-direction: column;
+    }
+.name-local{
+        font-weight: 600;
+    }
+    .courses time{
+        font-size: 12px;
+    }
+}

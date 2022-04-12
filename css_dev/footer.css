@@ -1,0 +1,106 @@
+footer{
+    background-color: #083C78;
+    padding: 40px 24px 80px;
+}
+#footer-container{
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    gap: 10px 24px;
+    align-items: center;
+}
+#contact-title{
+    color: #002A59;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    font-size: 48px;
+    line-height: 54px;
+    grid-column: 1 / -1;
+}
+#footer-paragraph{
+    color: #D1D1D1;
+    max-width: 26ch;
+    font-family: 'Lato', sans-serif;
+    font-size: 20px;
+    line-height: 30px;
+}
+#footer-container>address>ul{
+    list-style: none;
+    display: grid;
+    gap: 10px;
+}
+.contact{
+    color: white;
+    font-family: 'Lato', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 20px;
+    text-decoration: none;
+    display: flex;
+    gap: 10px;
+}
+.contact:hover{
+    color: #00FF80;
+}
+#mail::before{
+    content: url(../img/mail.svg);
+    display: inline-block;
+    height: 24px;
+    width: 24px;
+}
+#insta::before{
+    content: url(../img/instagram.svg);
+    display: inline-block;
+    height: 24px;
+    width: 24px;
+}
+#wpp::before{
+    content: url(../img/whatsapp.svg);
+    display: inline-block;
+    height: 24px;
+    width: 24px;
+}
+#rights{
+    color: #D1D1D1;
+    font-family: 'Lato', sans-serif;
+    font-size: 18px;
+    line-height: 27px;
+    text-align: center;
+    max-width: 24ch;
+}
+#copyright{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+@media (max-width: 809px) {
+    footer{
+        padding-bottom: 40px;
+    }
+    #footer-container{
+        grid-template-columns: repeat(2, auto);
+    }
+    #copyright{
+        margin-top: 24px;
+        grid-column: 1 / -1;
+    }
+}
+@media (max-width: 599px) {
+    footer{
+        padding-bottom: 40px;
+    }
+    #contact-title, #footer-paragraph{
+        text-align: center;
+    }
+    #footer-container{
+        grid-template-columns: auto;
+        gap: 24px;
+        justify-content: center;
+    }
+    #copyright{
+        grid-column: 1 / -1;
+    }
+}
