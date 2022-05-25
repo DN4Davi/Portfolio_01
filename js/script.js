@@ -13,6 +13,7 @@ let menu = document.querySelector('#mobile.menu')
 menu.addEventListener('touchstart', menuToggle);
 menu.addEventListener('click', menuToggle);
 function menuToggle(e) {
+    e.preventDefault()
     const thisParent = this.parentElement
     thisParent.classList.toggle('active');
     if(thisParent.classList.contains('active')){
