@@ -11,16 +11,17 @@ function scroll (e){
 }
 let menu = document.querySelector('#mobile.menu')
 menu.addEventListener('touchstart', menuToggle);
-function menuToggle() {
+menu.addEventListener('click', menuToggle);
+function menuToggle(e) {
     const thisParent = this.parentElement
     thisParent.classList.toggle('active');
     if(thisParent.classList.contains('active')){
-        document.documentElement.addEventListener('touchstart', outside);
+        document.documentElement.addEventListener(e.type, outside);
     }else{
-        document.documentElement.removeEventListener('touchstart', outside)
+        document.documentElement.removeEventListener(e.type, outside)
     }
 }
 function outside (e) {if(!menu.parentElement.contains(e.target)){
     menu.parentElement.classList.remove('active');
-    document.documentElement.removeEventListener('touchstart', outside)
+    document.documentElement.removeEventListener(e.type, outside)
 }}
